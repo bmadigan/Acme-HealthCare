@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\Patient;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class PatientsController extends Controller
      */
     public function index()
     {
-        //
+        $patients = Auth::user()->patients;
+
+        return view('patients.index', ['patients' => $patients]);
     }
 
     /**
@@ -46,7 +49,14 @@ class PatientsController extends Controller
      */
     public function show(Patient $patient)
     {
-        //
+        // Used Laravel's built-in Policy approach
+        $this->authorize('view', $patient);
+
+        if(request()->wantsJson()) {
+            return response($patient, 200);
+        }
+
+        return view('patients.show', ['patient' => $patient]);
     }
 
     /**
