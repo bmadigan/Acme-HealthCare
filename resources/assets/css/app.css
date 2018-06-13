@@ -9,3 +9,4 @@
 @import "tailwindcss/utilities";
 
 /* Add custom utilities here... */
+@import "custom-styles"

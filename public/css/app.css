@@ -3515,6 +3515,11 @@ button,
 
 /* Add custom utilities here... */
 
+.temp-style {
+  background-color: #333;
+  color: #fff;
+}
+
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
