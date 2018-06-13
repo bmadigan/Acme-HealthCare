@@ -11,15 +11,31 @@
         </div>
 
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div class="text-sm lg:flex-grow lg:ml-4">
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-blue-lighter no-underline hover:text-white mr-8">
-                    <i class="far fa-address-book mr-1"></i> Appointments</a>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-blue-lighter no-underline hover:text-white">
-                    <i class="fas fa-user-circle mr-1"></i> Patients</a>
-            </div>
+            @auth
+                <div class="text-sm lg:flex-grow lg:ml-4">
+                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-blue-lighter no-underline hover:text-white mr-8">
+                        <i class="far fa-address-book mr-1"></i> Appointments</a>
+                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-blue-lighter no-underline hover:text-white">
+                        <i class="fas fa-user-circle mr-1"></i> Patients</a>
+                </div>
+            @endauth
             <div>
-                <a href="#" class="inline-block text-sm px-4 py-2 leading-none text-white mt-4 lg:mt-0 no-underline">
-                    <i class="fas fa-user-md mr-2"></i> Brad Madigan</a>
+                @auth
+                    <a href="#" class="inline-block text-sm px-4 py-2 leading-none text-white mt-4 lg:mt-0 no-underline">
+                        <i class="fas fa-user-md mr-2"></i>
+                        <strong>{{ Auth::user()->name }}</strong>
+
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();"
+                            class="text-white ml-3 text-xs no-underline hover:underline">(Logout)</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </a>
+                @else
+                    <a href="{{ route('login') }}" class="text-white">Login</a>
+                @endauth
             </div>
         </div>
     </nav>

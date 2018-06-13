@@ -1,26 +1,26 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('body')
-    <div class="items-center justify-center">
-        <h1 class="text-5xl text-blue">Login</h1>
 
-        <div class="mt-6 bg-blue-lighter py-4 px-6">
-            <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
-                {{ csrf_field() }}
-                <div class="p-3">
-                    <input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-                </div>
-                <div class="p-3">
-                    <input id="password" type="password" placeholder="*********" class="form-control" name="password" required>
-                </div>
+    <div class="w-full max-w-xs">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" role="form" method="POST" action="{{ route('login') }}">
 
-                <div class="mt-4">
-                    <button type="submit" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Login</button>
-                    <a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password?</a>
-                </div>
-            </form>
-        </div>
+            {{ csrf_field() }}
 
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">Email Address</label>
+                <input class=" appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight" id="username" name="email" type="text" placeholder="Email" required autofocus>
+            </div>
 
+            <div class="mb-3">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">Password</label>
+                <input class=" appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight mb-3" id="password" name="password" type="password" placeholder="******************">
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded w-full" type="submit">Sign In</button>
+            </div>
+        </form>
     </div>
+
 @endsection
