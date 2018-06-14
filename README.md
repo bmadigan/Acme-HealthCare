@@ -30,3 +30,7 @@ composer install
 php artisan migrate:refresh --seed
 npm install && npm run dev
 ```
+
+### PHPUnit Tests
+
+You can also run the Unit Tests by `phpunit` or `vendor/phpunit/phpunit/phpunit`
