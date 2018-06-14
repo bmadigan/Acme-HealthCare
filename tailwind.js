@@ -48,6 +48,11 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
     'transparent': 'transparent',
 
+    'black-20': 'rgba(0, 0, 0, 0.2)',
+    'black-40': 'rgba(0, 0, 0, 0.4)',
+    'black-60': 'rgba(0, 0, 0, 0.6)',
+    'black-80': 'rgba(0, 0, 0, 0.8)',
+
     'beige-dark': '#CCC4A6',
     'beige': '#F0EBD8',
     'beige-light': '#FFFDF5',
@@ -599,6 +604,8 @@ module.exports = {
         '4': '1rem',
         '6': '1.5rem',
         '8': '2rem',
+        '16': '2.5rem',
+        '24': '3rem',
     },
 
 

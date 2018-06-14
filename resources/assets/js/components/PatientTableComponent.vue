@@ -24,6 +24,21 @@
                 </table-component>
             </div>
         </div>
+
+        <div class="fixed pin bg-black-40 flex justify-center items-center py-24">
+            <div class="max-w-sm w-full bg-white rounded-lg p-6 shadow-lg">
+                <h3 class="font-semibold text-md text-blue text-center mb-4 uppercase">Patient Information</h3>
+                <label class="block mb-4">
+                     <span class="block text-sm font-bold mb-2">Patient Name</span>
+                    <input type="text" class="form-input-text" placeholder="John Smith">
+                </label>
+                <label class="block">
+                    <span class="block text-sm font-bold mb-2">Patient Num</span>
+                    <input type="text" class="form-input-text" placeholder="PIN-2123123">
+                </label>
+            </div>
+        </div>
+
     </div>
 </template>
 

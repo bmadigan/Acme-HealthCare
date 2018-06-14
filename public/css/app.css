@@ -692,16 +692,14 @@ button,
 }
 
 .form-input-text {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-width: 1px;
-  border-radius: .25rem;
+  display: block;
   width: 100%;
+  background-color: #f1f5f8;
+  border-radius: .25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  padding-left: .75rem;
-  padding-right: .75rem;
   color: #606f7b;
   line-height: 1.25;
 }
@@ -755,16 +753,14 @@ button,
 }
 
 .table-component__filter__field {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-width: 1px;
-  border-radius: .25rem;
+  display: block;
   width: 100%;
+  background-color: #f1f5f8;
+  border-radius: .25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  padding-left: .75rem;
-  padding-right: .75rem;
   color: #606f7b;
   line-height: 1.25;
 }
@@ -805,6 +801,22 @@ button,
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-black-20 {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.bg-black-40 {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.bg-black-60 {
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.bg-black-80 {
+  background-color: rgba(0, 0, 0, .8);
 }
 
 .bg-beige-dark {
@@ -909,6 +921,22 @@ button,
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
+}
+
+.hover\:bg-black-20:hover {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.hover\:bg-black-40:hover {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.hover\:bg-black-60:hover {
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.hover\:bg-black-80:hover {
+  background-color: rgba(0, 0, 0, .8);
 }
 
 .hover\:bg-beige-dark:hover {
@@ -1079,6 +1107,22 @@ button,
   border-color: transparent;
 }
 
+.border-black-20 {
+  border-color: rgba(0, 0, 0, .2);
+}
+
+.border-black-40 {
+  border-color: rgba(0, 0, 0, .4);
+}
+
+.border-black-60 {
+  border-color: rgba(0, 0, 0, .6);
+}
+
+.border-black-80 {
+  border-color: rgba(0, 0, 0, .8);
+}
+
 .border-beige-dark {
   border-color: #ccc4a6;
 }
@@ -1181,6 +1225,22 @@ button,
 
 .hover\:border-transparent:hover {
   border-color: transparent;
+}
+
+.hover\:border-black-20:hover {
+  border-color: rgba(0, 0, 0, .2);
+}
+
+.hover\:border-black-40:hover {
+  border-color: rgba(0, 0, 0, .4);
+}
+
+.hover\:border-black-60:hover {
+  border-color: rgba(0, 0, 0, .6);
+}
+
+.hover\:border-black-80:hover {
+  border-color: rgba(0, 0, 0, .8);
 }
 
 .hover\:border-beige-dark:hover {
@@ -2713,6 +2773,14 @@ button,
   padding: 2rem;
 }
 
+.p-16 {
+  padding: 2.5rem;
+}
+
+.p-24 {
+  padding: 3rem;
+}
+
 .p-px {
   padding: 1px;
 }
@@ -2785,6 +2853,26 @@ button,
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-16 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-16 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-24 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.px-24 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .py-px {
@@ -2907,6 +2995,38 @@ button,
 
 .pl-8 {
   padding-left: 2rem;
+}
+
+.pt-16 {
+  padding-top: 2.5rem;
+}
+
+.pr-16 {
+  padding-right: 2.5rem;
+}
+
+.pb-16 {
+  padding-bottom: 2.5rem;
+}
+
+.pl-16 {
+  padding-left: 2.5rem;
+}
+
+.pt-24 {
+  padding-top: 3rem;
+}
+
+.pr-24 {
+  padding-right: 3rem;
+}
+
+.pb-24 {
+  padding-bottom: 3rem;
+}
+
+.pl-24 {
+  padding-left: 3rem;
 }
 
 .pt-px {
@@ -3063,6 +3183,22 @@ button,
   color: transparent;
 }
 
+.text-black-20 {
+  color: rgba(0, 0, 0, .2);
+}
+
+.text-black-40 {
+  color: rgba(0, 0, 0, .4);
+}
+
+.text-black-60 {
+  color: rgba(0, 0, 0, .6);
+}
+
+.text-black-80 {
+  color: rgba(0, 0, 0, .8);
+}
+
 .text-beige-dark {
   color: #ccc4a6;
 }
@@ -3165,6 +3301,22 @@ button,
 
 .hover\:text-transparent:hover {
   color: transparent;
+}
+
+.hover\:text-black-20:hover {
+  color: rgba(0, 0, 0, .2);
+}
+
+.hover\:text-black-40:hover {
+  color: rgba(0, 0, 0, .4);
+}
+
+.hover\:text-black-60:hover {
+  color: rgba(0, 0, 0, .6);
+}
+
+.hover\:text-black-80:hover {
+  color: rgba(0, 0, 0, .8);
 }
 
 .hover\:text-beige-dark:hover {
@@ -3655,6 +3807,22 @@ button,
     background-color: transparent;
   }
 
+  .sm\:bg-black-20 {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .sm\:bg-black-40 {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .sm\:bg-black-60 {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .sm\:bg-black-80 {
+    background-color: rgba(0, 0, 0, .8);
+  }
+
   .sm\:bg-beige-dark {
     background-color: #ccc4a6;
   }
@@ -3757,6 +3925,22 @@ button,
 
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
+  }
+
+  .sm\:hover\:bg-black-20:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .sm\:hover\:bg-black-40:hover {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .sm\:hover\:bg-black-60:hover {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .sm\:hover\:bg-black-80:hover {
+    background-color: rgba(0, 0, 0, .8);
   }
 
   .sm\:hover\:bg-beige-dark:hover {
@@ -3927,6 +4111,22 @@ button,
     border-color: transparent;
   }
 
+  .sm\:border-black-20 {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .sm\:border-black-40 {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .sm\:border-black-60 {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .sm\:border-black-80 {
+    border-color: rgba(0, 0, 0, .8);
+  }
+
   .sm\:border-beige-dark {
     border-color: #ccc4a6;
   }
@@ -4029,6 +4229,22 @@ button,
 
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
+  }
+
+  .sm\:hover\:border-black-20:hover {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .sm\:hover\:border-black-40:hover {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .sm\:hover\:border-black-60:hover {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .sm\:hover\:border-black-80:hover {
+    border-color: rgba(0, 0, 0, .8);
   }
 
   .sm\:hover\:border-beige-dark:hover {
@@ -5561,6 +5777,14 @@ button,
     padding: 2rem;
   }
 
+  .sm\:p-16 {
+    padding: 2.5rem;
+  }
+
+  .sm\:p-24 {
+    padding: 3rem;
+  }
+
   .sm\:p-px {
     padding: 1px;
   }
@@ -5633,6 +5857,26 @@ button,
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .sm\:py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:px-16 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .sm\:py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .sm\:px-24 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .sm\:py-px {
@@ -5755,6 +5999,38 @@ button,
 
   .sm\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .sm\:pt-16 {
+    padding-top: 2.5rem;
+  }
+
+  .sm\:pr-16 {
+    padding-right: 2.5rem;
+  }
+
+  .sm\:pb-16 {
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:pl-16 {
+    padding-left: 2.5rem;
+  }
+
+  .sm\:pt-24 {
+    padding-top: 3rem;
+  }
+
+  .sm\:pr-24 {
+    padding-right: 3rem;
+  }
+
+  .sm\:pb-24 {
+    padding-bottom: 3rem;
+  }
+
+  .sm\:pl-24 {
+    padding-left: 3rem;
   }
 
   .sm\:pt-px {
@@ -5903,6 +6179,22 @@ button,
     color: transparent;
   }
 
+  .sm\:text-black-20 {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .sm\:text-black-40 {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .sm\:text-black-60 {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .sm\:text-black-80 {
+    color: rgba(0, 0, 0, .8);
+  }
+
   .sm\:text-beige-dark {
     color: #ccc4a6;
   }
@@ -6005,6 +6297,22 @@ button,
 
   .sm\:hover\:text-transparent:hover {
     color: transparent;
+  }
+
+  .sm\:hover\:text-black-20:hover {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .sm\:hover\:text-black-40:hover {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .sm\:hover\:text-black-60:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .sm\:hover\:text-black-80:hover {
+    color: rgba(0, 0, 0, .8);
   }
 
   .sm\:hover\:text-beige-dark:hover {
@@ -6496,6 +6804,22 @@ button,
     background-color: transparent;
   }
 
+  .md\:bg-black-20 {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .md\:bg-black-40 {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .md\:bg-black-60 {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .md\:bg-black-80 {
+    background-color: rgba(0, 0, 0, .8);
+  }
+
   .md\:bg-beige-dark {
     background-color: #ccc4a6;
   }
@@ -6598,6 +6922,22 @@ button,
 
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
+  }
+
+  .md\:hover\:bg-black-20:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .md\:hover\:bg-black-40:hover {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .md\:hover\:bg-black-60:hover {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .md\:hover\:bg-black-80:hover {
+    background-color: rgba(0, 0, 0, .8);
   }
 
   .md\:hover\:bg-beige-dark:hover {
@@ -6768,6 +7108,22 @@ button,
     border-color: transparent;
   }
 
+  .md\:border-black-20 {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .md\:border-black-40 {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .md\:border-black-60 {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .md\:border-black-80 {
+    border-color: rgba(0, 0, 0, .8);
+  }
+
   .md\:border-beige-dark {
     border-color: #ccc4a6;
   }
@@ -6870,6 +7226,22 @@ button,
 
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
+  }
+
+  .md\:hover\:border-black-20:hover {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .md\:hover\:border-black-40:hover {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .md\:hover\:border-black-60:hover {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .md\:hover\:border-black-80:hover {
+    border-color: rgba(0, 0, 0, .8);
   }
 
   .md\:hover\:border-beige-dark:hover {
@@ -8402,6 +8774,14 @@ button,
     padding: 2rem;
   }
 
+  .md\:p-16 {
+    padding: 2.5rem;
+  }
+
+  .md\:p-24 {
+    padding: 3rem;
+  }
+
   .md\:p-px {
     padding: 1px;
   }
@@ -8474,6 +8854,26 @@ button,
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .md\:py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .md\:px-24 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:py-px {
@@ -8596,6 +8996,38 @@ button,
 
   .md\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .md\:pt-16 {
+    padding-top: 2.5rem;
+  }
+
+  .md\:pr-16 {
+    padding-right: 2.5rem;
+  }
+
+  .md\:pb-16 {
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:pl-16 {
+    padding-left: 2.5rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 3rem;
+  }
+
+  .md\:pr-24 {
+    padding-right: 3rem;
+  }
+
+  .md\:pb-24 {
+    padding-bottom: 3rem;
+  }
+
+  .md\:pl-24 {
+    padding-left: 3rem;
   }
 
   .md\:pt-px {
@@ -8744,6 +9176,22 @@ button,
     color: transparent;
   }
 
+  .md\:text-black-20 {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .md\:text-black-40 {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .md\:text-black-60 {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .md\:text-black-80 {
+    color: rgba(0, 0, 0, .8);
+  }
+
   .md\:text-beige-dark {
     color: #ccc4a6;
   }
@@ -8846,6 +9294,22 @@ button,
 
   .md\:hover\:text-transparent:hover {
     color: transparent;
+  }
+
+  .md\:hover\:text-black-20:hover {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .md\:hover\:text-black-40:hover {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .md\:hover\:text-black-60:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .md\:hover\:text-black-80:hover {
+    color: rgba(0, 0, 0, .8);
   }
 
   .md\:hover\:text-beige-dark:hover {
@@ -9337,6 +9801,22 @@ button,
     background-color: transparent;
   }
 
+  .lg\:bg-black-20 {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .lg\:bg-black-40 {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .lg\:bg-black-60 {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .lg\:bg-black-80 {
+    background-color: rgba(0, 0, 0, .8);
+  }
+
   .lg\:bg-beige-dark {
     background-color: #ccc4a6;
   }
@@ -9439,6 +9919,22 @@ button,
 
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
+  }
+
+  .lg\:hover\:bg-black-20:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .lg\:hover\:bg-black-40:hover {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .lg\:hover\:bg-black-60:hover {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .lg\:hover\:bg-black-80:hover {
+    background-color: rgba(0, 0, 0, .8);
   }
 
   .lg\:hover\:bg-beige-dark:hover {
@@ -9609,6 +10105,22 @@ button,
     border-color: transparent;
   }
 
+  .lg\:border-black-20 {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .lg\:border-black-40 {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .lg\:border-black-60 {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .lg\:border-black-80 {
+    border-color: rgba(0, 0, 0, .8);
+  }
+
   .lg\:border-beige-dark {
     border-color: #ccc4a6;
   }
@@ -9711,6 +10223,22 @@ button,
 
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
+  }
+
+  .lg\:hover\:border-black-20:hover {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .lg\:hover\:border-black-40:hover {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .lg\:hover\:border-black-60:hover {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .lg\:hover\:border-black-80:hover {
+    border-color: rgba(0, 0, 0, .8);
   }
 
   .lg\:hover\:border-beige-dark:hover {
@@ -11243,6 +11771,14 @@ button,
     padding: 2rem;
   }
 
+  .lg\:p-16 {
+    padding: 2.5rem;
+  }
+
+  .lg\:p-24 {
+    padding: 3rem;
+  }
+
   .lg\:p-px {
     padding: 1px;
   }
@@ -11315,6 +11851,26 @@ button,
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .lg\:py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .lg\:px-24 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .lg\:py-px {
@@ -11437,6 +11993,38 @@ button,
 
   .lg\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .lg\:pt-16 {
+    padding-top: 2.5rem;
+  }
+
+  .lg\:pr-16 {
+    padding-right: 2.5rem;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 2.5rem;
+  }
+
+  .lg\:pl-16 {
+    padding-left: 2.5rem;
+  }
+
+  .lg\:pt-24 {
+    padding-top: 3rem;
+  }
+
+  .lg\:pr-24 {
+    padding-right: 3rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 3rem;
+  }
+
+  .lg\:pl-24 {
+    padding-left: 3rem;
   }
 
   .lg\:pt-px {
@@ -11585,6 +12173,22 @@ button,
     color: transparent;
   }
 
+  .lg\:text-black-20 {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .lg\:text-black-40 {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .lg\:text-black-60 {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .lg\:text-black-80 {
+    color: rgba(0, 0, 0, .8);
+  }
+
   .lg\:text-beige-dark {
     color: #ccc4a6;
   }
@@ -11687,6 +12291,22 @@ button,
 
   .lg\:hover\:text-transparent:hover {
     color: transparent;
+  }
+
+  .lg\:hover\:text-black-20:hover {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .lg\:hover\:text-black-40:hover {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .lg\:hover\:text-black-60:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .lg\:hover\:text-black-80:hover {
+    color: rgba(0, 0, 0, .8);
   }
 
   .lg\:hover\:text-beige-dark:hover {
@@ -12178,6 +12798,22 @@ button,
     background-color: transparent;
   }
 
+  .xl\:bg-black-20 {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .xl\:bg-black-40 {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .xl\:bg-black-60 {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .xl\:bg-black-80 {
+    background-color: rgba(0, 0, 0, .8);
+  }
+
   .xl\:bg-beige-dark {
     background-color: #ccc4a6;
   }
@@ -12280,6 +12916,22 @@ button,
 
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
+  }
+
+  .xl\:hover\:bg-black-20:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+
+  .xl\:hover\:bg-black-40:hover {
+    background-color: rgba(0, 0, 0, .4);
+  }
+
+  .xl\:hover\:bg-black-60:hover {
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .xl\:hover\:bg-black-80:hover {
+    background-color: rgba(0, 0, 0, .8);
   }
 
   .xl\:hover\:bg-beige-dark:hover {
@@ -12450,6 +13102,22 @@ button,
     border-color: transparent;
   }
 
+  .xl\:border-black-20 {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .xl\:border-black-40 {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .xl\:border-black-60 {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .xl\:border-black-80 {
+    border-color: rgba(0, 0, 0, .8);
+  }
+
   .xl\:border-beige-dark {
     border-color: #ccc4a6;
   }
@@ -12552,6 +13220,22 @@ button,
 
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
+  }
+
+  .xl\:hover\:border-black-20:hover {
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  .xl\:hover\:border-black-40:hover {
+    border-color: rgba(0, 0, 0, .4);
+  }
+
+  .xl\:hover\:border-black-60:hover {
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  .xl\:hover\:border-black-80:hover {
+    border-color: rgba(0, 0, 0, .8);
   }
 
   .xl\:hover\:border-beige-dark:hover {
@@ -14084,6 +14768,14 @@ button,
     padding: 2rem;
   }
 
+  .xl\:p-16 {
+    padding: 2.5rem;
+  }
+
+  .xl\:p-24 {
+    padding: 3rem;
+  }
+
   .xl\:p-px {
     padding: 1px;
   }
@@ -14156,6 +14848,26 @@ button,
   .xl\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .xl\:py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .xl\:px-16 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .xl\:py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .xl\:px-24 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .xl\:py-px {
@@ -14278,6 +14990,38 @@ button,
 
   .xl\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .xl\:pt-16 {
+    padding-top: 2.5rem;
+  }
+
+  .xl\:pr-16 {
+    padding-right: 2.5rem;
+  }
+
+  .xl\:pb-16 {
+    padding-bottom: 2.5rem;
+  }
+
+  .xl\:pl-16 {
+    padding-left: 2.5rem;
+  }
+
+  .xl\:pt-24 {
+    padding-top: 3rem;
+  }
+
+  .xl\:pr-24 {
+    padding-right: 3rem;
+  }
+
+  .xl\:pb-24 {
+    padding-bottom: 3rem;
+  }
+
+  .xl\:pl-24 {
+    padding-left: 3rem;
   }
 
   .xl\:pt-px {
@@ -14426,6 +15170,22 @@ button,
     color: transparent;
   }
 
+  .xl\:text-black-20 {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .xl\:text-black-40 {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .xl\:text-black-60 {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .xl\:text-black-80 {
+    color: rgba(0, 0, 0, .8);
+  }
+
   .xl\:text-beige-dark {
     color: #ccc4a6;
   }
@@ -14528,6 +15288,22 @@ button,
 
   .xl\:hover\:text-transparent:hover {
     color: transparent;
+  }
+
+  .xl\:hover\:text-black-20:hover {
+    color: rgba(0, 0, 0, .2);
+  }
+
+  .xl\:hover\:text-black-40:hover {
+    color: rgba(0, 0, 0, .4);
+  }
+
+  .xl\:hover\:text-black-60:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  .xl\:hover\:text-black-80:hover {
+    color: rgba(0, 0, 0, .8);
   }
 
   .xl\:hover\:text-beige-dark:hover {
