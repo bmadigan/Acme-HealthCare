@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
+
     // Default Dashboard
     Route::get('/home', function () {
         return view('home');

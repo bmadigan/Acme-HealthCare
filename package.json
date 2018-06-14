@@ -19,5 +19,9 @@
         "postcss-nesting": "^5.0.0",
         "tailwindcss": ">=0.5.3",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "moment": "^2.22.2",
+        "vue-table-component": "^1.9.1"
     }
 }

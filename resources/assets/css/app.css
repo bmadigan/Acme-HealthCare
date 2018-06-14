@@ -4,9 +4,6 @@
 
 @import "tailwindcss/components";
 
-/* Add custom components here... */
+@import "custom-styles";
 
 @import "tailwindcss/utilities";
-
-/* Add custom utilities here... */
-@import "custom-styles"

@@ -17,6 +17,11 @@ class PatientsController extends Controller
     {
         $patients = Auth::user()->patients;
 
+        // Used for the VueJS component
+        if (request()->wantsJson()) {
+            return response($patients, 200);
+        }
+
         return view('patients.index', ['patients' => $patients]);
     }
 

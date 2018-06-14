@@ -664,7 +664,120 @@ button,
   }
 }
 
-/* Add custom components here... */
+.btn {
+  font-weight: 700;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: .25rem;
+}
+
+.btn-primary {
+  background-color: #475871;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1d2d44;
+}
+
+.btn-secondary {
+  background-color: #38c172;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #1f9d55;
+}
+
+.form-input-text {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 1px;
+  border-radius: .25rem;
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  color: #606f7b;
+  line-height: 1.25;
+}
+
+.table {
+  width: 100%;
+  background-color: #fff;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding: 0;
+  display: table;
+}
+
+.table-thead {
+  background-color: #f1f5f8;
+  color: #606f7b;
+  font-weight: 700;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .75rem;
+}
+
+.table-tbody {
+  border-bottom-width: 2px;
+  border-color: #f8fafc;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: .875rem;
+  margin-bottom: .25rem;
+}
+
+.table-tbody:hover {
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+.table-component__table__caption {
+  font-size: .75rem;
+  color: #b8c2cc;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  letter-spacing: .05em;
+  text-align: right;
+}
+
+.table-component__filter__field {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-width: 1px;
+  border-radius: .25rem;
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  color: #606f7b;
+  line-height: 1.25;
+}
+
+.segment {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+  padding: 1rem;
+  border-right-width: 4px;
+  border-color: #f1f5f8;
+}
 
 .list-reset {
   list-style: none;
@@ -3511,13 +3624,6 @@ button,
 
 .z-auto {
   z-index: auto;
-}
-
-/* Add custom utilities here... */
-
-.temp-style {
-  background-color: #333;
-  color: #fff;
 }
 
 @media (min-width: 576px) {
