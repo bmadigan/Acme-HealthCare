@@ -8,10 +8,19 @@
             <span class="font-semibold text-5xl tracking-tight">Acme HealthCare</span>
         </div>
 
-        <h1 class="text-2xl text-blue-darker">Greetings Stranger.</h1>
+        <h1 class="text-3xl text-blue-dark">Hello.</h1>
+        <h2 class="text-2xl text-blue">Welcome to your patient portal</h2>
 
-        <div class="mt-4">
-            <a href="{{ route('login') }}" class="text-xl text-blue hover:text-blue-darker">Login To Your Account</a>
+        <div class="mt-8">
+            <a href="{{ route('login') }}" class="uppercase text-blue hover:text-blue-darker">You May Login To Your Account</a>
+        </div>
+
+        <div class="mt-4 bg-white rounded border border-beige p-4">
+            <p class="text-sm text-grey-dark">
+                Login Test Account: <strong>Dr. John Smith</strong><br>
+                Email: <strong>doctor@testing.com</strong><br>
+                Password: <strong>secret</strong>
+            </p>
         </div>
     </div>
 @endsection
