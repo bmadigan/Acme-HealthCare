@@ -34,3 +34,11 @@ npm install && npm run dev
 ### PHPUnit Tests
 
 You can also run the Unit Tests by `phpunit` or `vendor/phpunit/phpunit/phpunit`
+
+### Sample Login
+
+You may login with a seeded test account:
+```
+Email: doctor@testing.com
+Pass: secret
+```
