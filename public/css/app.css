@@ -733,7 +733,7 @@ button,
   padding-bottom: .75rem;
   padding-left: .5rem;
   padding-right: .5rem;
-  font-size: .875rem;
+  font-size: .75rem;
   margin-bottom: .25rem;
 }
 
@@ -751,6 +751,7 @@ button,
   padding-right: .5rem;
   letter-spacing: .05em;
   text-align: right;
+  display: none;
 }
 
 .table-component__filter__field {

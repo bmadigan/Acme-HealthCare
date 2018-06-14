@@ -1,38 +1,45 @@
 <template>
-    <div class="mt-2">
-        <table-component
-            :data="[
-                { firstName: 'John', birthday: '04/10/1940', songs: 72 },
-                { firstName: 'Paul', birthday: '18/06/1942', songs: 70 },
-                { firstName: 'George', birthday: '25/02/1943', songs: 22 },
-                { firstName: 'Ringo', birthday: '07/07/1940', songs: 2 },
-                { firstName: 'Brett', birthday: '04/10/1940', songs: 72 },
-                { firstName: 'Steven Beven', birthday: '18/06/1942', songs: 70 },
-                { firstName: 'Georgie Porgie', birthday: '25/02/1943', songs: 22 },
-                { firstName: 'Harry Berry', birthday: '07/07/1940', songs: 2 },
-            ]"
-            sort-by="songs"
-            sort-order="asc"
-            table-class="table"
-            show-filter="false"
-        >
-            <table-column show="firstName" label="First name" header-class="table-thead" cell-class="table-tbody"></table-column>
-            <table-column show="songs" label="Songs" data-type="numeric" header-class="table-thead" cell-class="table-tbody"></table-column>
-            <table-column show="birthday" label="Birthday" :filterable="false" data-type="date:DD/MM/YYYY" header-class="table-thead" cell-class="table-tbody"></table-column>
-        </table-component>
+    <div>
+        <div class="flex justify-between items-center border-b pb-3 mb-8">
+            <h1 class="text-2xl text-blue-darker">Your Patient Listing</h1>
+            <button class="btn btn-secondary text-sm">
+                <i class="fas fa-plus-circle mr-2"></i> ADD PATIENT
+            </button>
+        </div>
+
+        <div class="segment">
+            <div class="mt-2">
+                <table-component
+                    :data="getPatients"
+                    :sort-by="name"
+                    :sort-order="asc"
+                    table-class="table"
+                    :show-filter=false
+                >
+                    <table-column :sortable=false show="name" label="Patient Name" header-class="table-thead" cell-class="table-tbody font-bold"></table-column>
+                    <table-column :sortable=false show="patient_number" label="Patient Num" header-class="table-thead" cell-class="table-tbody"></table-column>
+                    <table-column :sortable=false show="health_status" label="Status" :filterable="false" header-class="table-thead" cell-class="table-tbody"></table-column>
+                    <table-column :sortable=false show="email" label="Email" header-class="table-thead" cell-class="table-tbody"></table-column>
+                    <table-column :sortable=false show="medicare_id" label="Medicare ID" header-class="table-thead" cell-class="table-tbody"></table-column>
+                </table-component>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
     import { TableComponent, TableColumn } from 'vue-table-component';
+    import axios from 'axios';
 
     Vue.component('table-component', TableComponent);
     Vue.component('table-column', TableColumn);
 
     export default {
-
-        mounted() {
-            console.log('Component mounted.')
+        methods: {
+            async getPatients() {
+                const response = await axios.get('/patients');
+                return response;
+            }
         }
     }
 </script>
