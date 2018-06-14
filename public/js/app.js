@@ -46877,6 +46877,25 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -46885,6 +46904,28 @@ Vue.component('table-component', __WEBPACK_IMPORTED_MODULE_1_vue_table_component
 Vue.component('table-column', __WEBPACK_IMPORTED_MODULE_1_vue_table_component__["TableColumn"]);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            showModal: false,
+            selectedPatient: {}
+        };
+    },
+
+    // Listen for the Escape key (Close Modal)
+    created: function created() {
+        var _this = this;
+
+        var escapeListener = function escapeListener(e) {
+            if (e.key === 'Escape') {
+                _this.closeModal();
+            }
+        };
+        document.addEventListener('keydown', escapeListener);
+        this.$on('hook:beforeDestory', function () {
+            document.removeEventListener('keydown', escapeListener);
+        });
+    },
+
     methods: {
         getPatients: function () {
             var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
@@ -46913,7 +46954,34 @@ Vue.component('table-column', __WEBPACK_IMPORTED_MODULE_1_vue_table_component__[
             }
 
             return getPatients;
-        }()
+        }(),
+        selectPatient: function selectPatient(row) {
+            this.openModal(row.data);
+        },
+        openModal: function openModal(data) {
+            this.showModal = true;
+            this.selectedPatient.name = data.name;
+            this.selectedPatient.email = data.email;
+            this.selectedPatient.patient_number = data.patient_number;
+        },
+        handleFocusOut: function handleFocusOut(e) {
+            if (this.$refs.modal.contains(e.relatedTarge)) {
+                return;
+            }
+            this.closeModal();
+        },
+        closeModal: function closeModal() {
+            this.showModal = false;
+            this.clearSelectedPatient();
+        },
+        clearSelectedPatient: function clearSelectedPatient() {
+            this.selectedPatient.name = null;
+            this.selectedPatient.email = null;
+            this.selectedPatient.patient_number = null;
+        },
+        openNew: function openNew() {
+            alert('This would be a modal to create a new patient.');
+        }
     }
 });
 
@@ -53082,9 +53150,31 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "div",
+      { staticClass: "flex justify-between items-center border-b pb-3 mb-8" },
+      [
+        _c("h1", { staticClass: "text-2xl text-blue-darker" }, [
+          _vm._v("Your Patient Listing")
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-secondary text-sm",
+            on: { click: _vm.openNew }
+          },
+          [
+            _c("i", { staticClass: "fas fa-plus-circle mr-2" }),
+            _vm._v(" ADD PATIENT\n        ")
+          ]
+        )
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "segment" }, [
+      _vm._m(0),
+      _vm._v(" "),
       _c(
         "div",
         { staticClass: "mt-2" },
@@ -53098,7 +53188,8 @@ var render = function() {
                 "sort-order": _vm.asc,
                 "table-class": "table",
                 "show-filter": false
-              }
+              },
+              on: { rowClick: _vm.selectPatient }
             },
             [
               _c("table-column", {
@@ -53159,43 +53250,28 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _vm._m(1)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "flex justify-between items-center border-b pb-3 mb-8" },
-      [
-        _c("h1", { staticClass: "text-2xl text-blue-darker" }, [
-          _vm._v("Your Patient Listing")
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn btn-secondary text-sm" }, [
-          _c("i", { staticClass: "fas fa-plus-circle mr-2" }),
-          _vm._v(" ADD PATIENT\n        ")
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
+    _c(
       "div",
       {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.showModal,
+            expression: "showModal"
+          }
+        ],
         staticClass:
           "fixed pin bg-black-40 flex justify-center items-center py-24"
       },
       [
         _c(
           "div",
-          { staticClass: "max-w-sm w-full bg-white rounded-lg p-6 shadow-lg" },
+          {
+            ref: "modal",
+            staticClass: "max-w-sm w-full bg-white rounded-lg p-6 shadow-lg",
+            on: { focusout: _vm.handleFocusOut }
+          },
           [
             _c(
               "h3",
@@ -53212,25 +53288,147 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selectedPatient.name,
+                    expression: "selectedPatient.name"
+                  }
+                ],
                 staticClass: "form-input-text",
-                attrs: { type: "text", placeholder: "John Smith" }
+                attrs: {
+                  type: "text",
+                  placeholder: "John Smith",
+                  autofocus: ""
+                },
+                domProps: { value: _vm.selectedPatient.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.selectedPatient, "name", $event.target.value)
+                  }
+                }
               })
             ]),
             _vm._v(" "),
-            _c("label", { staticClass: "block" }, [
+            _c("label", { staticClass: "block mb-4" }, [
               _c("span", { staticClass: "block text-sm font-bold mb-2" }, [
                 _vm._v("Patient Num")
               ]),
               _vm._v(" "),
               _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selectedPatient.patient_number,
+                    expression: "selectedPatient.patient_number"
+                  }
+                ],
                 staticClass: "form-input-text",
-                attrs: { type: "text", placeholder: "PIN-2123123" }
+                attrs: { type: "text", placeholder: "EG. PIN-2123123" },
+                domProps: { value: _vm.selectedPatient.patient_number },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.selectedPatient,
+                      "patient_number",
+                      $event.target.value
+                    )
+                  }
+                }
               })
-            ])
+            ]),
+            _vm._v(" "),
+            _c("label", { staticClass: "block" }, [
+              _c("span", { staticClass: "block text-sm font-bold mb-2" }, [
+                _vm._v("Email Address")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selectedPatient.email,
+                    expression: "selectedPatient.email"
+                  }
+                ],
+                staticClass: "form-input-text",
+                attrs: {
+                  type: "text",
+                  placeholder: "Patient-Name@theiremail.com"
+                },
+                domProps: { value: _vm.selectedPatient.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.selectedPatient, "email", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2)
           ]
         )
       ]
     )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-2" }, [
+      _c("p", { staticClass: "text-center text-xs text-grey leading-normal" }, [
+        _vm._v(
+          "\n                Please Note: The EDIT and ADD are not completed. Quickly ran out of time."
+        ),
+        _c("br"),
+        _vm._v(
+          "\n                You can however click each Patient's name to populate the Modal.\n            "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-6 mb-4" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary block w-full",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("Save Patient Information")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("p", { staticClass: "text-center text-xs text-grey" }, [
+        _vm._v("Press "),
+        _c("span", { staticClass: "font-bold" }, [_vm._v("ESC")]),
+        _vm._v(" to close")
+      ])
+    ])
   }
 ]
 render._withStripped = true
