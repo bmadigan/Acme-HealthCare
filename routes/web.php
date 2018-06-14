@@ -13,12 +13,18 @@
 
 Auth::routes();
 
-Route::get('/home', function () {
-    return view('home');
-});
-
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/patients', 'PatientsController@index')->name('patients.index');
-Route::get('/patients/{patient}', 'PatientsController@show')->name('patients.show');
+
+Route::group(['middleware' => 'auth'], function () {
+    // Default Dashboard
+    Route::get('/home', function () {
+        return view('home');
+    });
+
+    // Patient Routes
+    Route::get('/patients', 'PatientsController@index')->name('patients.index');
+    Route::get('/patients/{patient}', 'PatientsController@show')->name('patients.show');
+
+});
