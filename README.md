@@ -18,6 +18,15 @@ The current codebase for simplicity sake, only showcases the following features:
 
 Using either Homestead or Valet, you can install the application by the following:
 
-```sh
-$> git pull ...
+```
+git clone git@github.com:bmadigan/Acme-HealthCare.git
+cd Acme-HealthCare
+mv .env.example .env
+```
+> Update your own *.env* settings
+
+```
+composer install
+php artisan migrate:refresh --seed
+npm install && npm run dev
 ```
